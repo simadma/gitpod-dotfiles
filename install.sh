@@ -10,6 +10,11 @@ cd "$(dirname "$0")"
 # Configuring git signing
 source scripts/git_sign_config.sh
 
+# Temporarily set Anonymous Git Email
+github_email=47949834+simadma@users.noreply.github.com
+echo "export GIT_AUTHOR_EMAIL=${github_email}" >> ~/.bashrc
+echo "export GIT_COMMITTER_EMAIL=${github_email}" >> ~/.bashrc
+
 # Install tmux
 # source scripts/install_tmux.sh
 
